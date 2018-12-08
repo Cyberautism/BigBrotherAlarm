@@ -1,0 +1,186 @@
+body{
+	font-family: Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	color: #222222;
+}
+
+header{
+	background: url(../img/BigScreen.png) no-repeat center top / cover;
+	height: 100vh;
+}
+
+.clearfix:after {
+	content:'';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+
+nav{
+	float: right;
+	margin-top: 50px;
+}
+
+div{
+	box-sizing: border-box;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.logo{
+	margin-top: 60px;
+	float: left;
+}
+
+.menu{
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.menu li{
+	float: left;
+	display: block;
+	margin-right: 90px;
+	font-weight: bold;
+}
+
+.menu a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 25px;
+	text-align: right;
+}
+
+.titles_first{
+	font-size: 40px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center; 
+	margin-top: 226px;
+}
+
+h1{
+	font-size: 60px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align: center; 
+	margin: 15px;
+}
+
+.button{
+	background: #fed136;
+	color: #484543;
+	border-radius: 4px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 17px;
+	margin-top: 150px;
+}
+
+.title{
+	padding-top: 55px;
+}
+
+.title h2{
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	
+}
+
+.title p{
+	color: #777777;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.services{
+	margin-top: 40px;
+}
+
+.services_item{
+	width: 270px;
+	float: left;
+	text-align: center;
+}
+
+.services_item h3{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.services_item p{
+	color: #777777;
+	font-size: 14px;
+	line-height: 1.55em;
+}
+
+.services_item:last-child{
+	float: right;
+}
+
+.services_item:nth-child(2){
+	margin-left: 90px;
+}
+
+#studio{
+	padding-bottom: 120px;
+	height: 70vh;
+}
+
+
+#about_project{
+	background: rgb(214, 245, 245);
+
+}
+.exemples{
+	height: 100vh;
+	margin-top: 40px;
+}
+
+.works{
+	margin-top: 70px
+	padding-bottom: 120px;
+}
+.fine{
+	background: url(../img/) no-repeat center top / cover;
+}
+.titles_foot{
+	font-size: 30px;
+	color: #222222;
+	text-align: center; 
+	margin-top: 60px;
+}
+/* ------------------------------------------------- */
+.sl__slide{
+	position: relative;
+}
+.sl__text{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7); 
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.sl__zag, .sl__desc{
+	margin: 0;
+	padding:0 10px;
+}
+/* ------------------------------------------------- */
