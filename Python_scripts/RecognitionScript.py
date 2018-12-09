@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 import os 
+import serial
+
+ser=serial.Serial('/dev/ttyACM0') #Conection to com port mk
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainer/trainer.yml')
@@ -12,7 +15,6 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 #iniciate id counter
 id = 0
 
-# names related to ids: example ==> Marcelo: id=1,  etc
 names = ['None', 'Peter', 'Kirill', 'Ivan', 'Dmitriy'] 
 
 # Initialize and start realtime video capture
@@ -27,7 +29,6 @@ minH = 0.1*cam.get(4)
 while True:
 
     ret, img =cam.read()
-    #img = cv2.flip(img, -1) # Flip vertically
 
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
@@ -45,11 +46,20 @@ while True:
         id, confidence = recognizer.predict(gray[y:y+h,x:x+w])
 
         # Check if confidence is less them 100 ==> "0" is perfect match 
-        if (confidence < 100):
-            id = names[id]
+        if (confidence < 100 ):
+            #id = names[id]
             confidence = "  {0}%".format(round(100 - confidence))
+            id="I know you"
+
+
+            ser = serial.Serial('/dev/ttyACM0')
+            ser.write(b'I know you')
+            if(confidence < 40):ser.write(b,'2')
+            else: ser.write(b,'1')
+
+
         else:
-            id = "unknown person"
+            id = "I dont know you"
             confidence = "  {0}%".format(round(100 - confidence))
 
         cv2.putText(img, str(id), (x+5,y-5), font, 1, (255,255,255), 2)
@@ -65,3 +75,4 @@ while True:
 print("\n [INFO] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()
+ser.close()
