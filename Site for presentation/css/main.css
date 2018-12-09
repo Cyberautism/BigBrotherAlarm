@@ -16,6 +16,77 @@ header{
 	width: 100%;
 	clear: both;
 }
+#main_menu{
+	background: #000000;
+	color: #ffffff;
+	border-radius: 4px;
+	display: block;
+	transition: background .2s linear, border-radius 1s ease-in 1s;
+
+}
+#main_menu:hover{
+	background: #ffffff;
+	color: #000000;
+	border-radius: 4px;
+	display: block;
+}
+#about_project11{
+	background: #000000;
+	color: #ffffff;
+	border-radius: 4px;
+	display: block;
+}
+#about_project11:hover{
+	background: #ffffff;
+	color: #000000;
+	border-radius: 4px;
+	display: block;
+
+}
+#progress{
+	background: #000000;
+	color: #ffffff;
+	border-radius: 4px;
+	display: block;
+
+}
+#progress:hover{
+	background: #ffffff;
+	color: #000000;
+	border-radius: 4px;
+	display: block;
+
+}
+#end{
+	background: #000000;
+	color: #ffffff;
+	border-radius: 4px;
+	display: block;
+
+}
+#end:hover{
+	background: #ffffff;
+	color: #000000;
+	border-radius: 4px;
+	display: block;
+}
+#roof_base{
+	background: #56c6ce;
+	color: #ffffff;
+	border-radius: 4px;
+	display: block;
+	margin-top:-20px;
+	transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#roof_base:hover{
+	background:#ffffff;
+	color:#56c6ce;
+	border-radius: 4px;
+	display: block;
+	margin-top:-20px;
+}
+
 
 nav{
 	float: right;
@@ -153,8 +224,8 @@ h1{
 }
 
 .works{
-	margin-top: 70px
-	padding-bottom: 120px;
+	margin-top: 70px;
+	padding-bottom : 120px;
 }
 .fine{
 	background: url(../img/) no-repeat center top / cover;
